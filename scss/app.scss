@@ -19,7 +19,7 @@
 //@include foundation-button-group;
 //@include foundation-callout;
 //@include foundation-close-button;
-//@include foundation-menu;
+@include foundation-menu;
 //@include foundation-menu-icon;
 //@include foundation-drilldown-menu;
 //@include foundation-dropdown;
@@ -31,8 +31,8 @@
 //@include foundation-orbit;
 //@include foundation-pagination;
 //@include foundation-progress-bar;
-// @include foundation-progress-element;
-// @include foundation-meter-element;
+//@include foundation-progress-element;
+//@include foundation-meter-element;
 //@include foundation-slider;
 //@include foundation-sticky;
 @include foundation-reveal;
@@ -718,6 +718,7 @@ section#gallery{
 /*****************************************/
 
 section#get-in-touch{
+	position: relative;
 	background: $blue;
 
 	.contact-form{
@@ -778,6 +779,22 @@ section#get-in-touch{
 			@include breakpoint (large) {
 				padding-right: 56px;
 			}
+		}
+	}
+
+	.skater{
+		display: none;
+		position: absolute;
+
+		@include breakpoint (medium) {
+			display: inline-block;
+			right: 20px; bottom: 20px;
+			img{width: 70px;}
+		}
+
+		@include breakpoint (large) {
+			right: 30px; bottom: 30px;
+			img{width: 130px}
 		}
 	}
 }
