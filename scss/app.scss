@@ -355,6 +355,7 @@ header#header{
 	.stripe-r-header{
 		top: -50px; right: 0;
 		display: none;
+		z-index: 0;
 
 		@include breakpoint(medium) {
 			display: inline-block;
@@ -517,8 +518,10 @@ section#after-school{
 			}
 		}
 	}
+
 	.footnote{
 		margin: 0;
+
 		@include breakpoint (large) {
 			margin-top: 40px;
 		}
@@ -626,6 +629,7 @@ section#news-events{
 
 		@include breakpoint (large) {
 			position: relative;
+			min-height: 460px;
 			height: auto;
 			overflow: visible;
 		
@@ -723,7 +727,6 @@ section#get-in-touch{
 	background: $blue;
 
 	.contact-form{
-		
 		@include breakpoint (medium) {
 			padding-right: 40px;
 			border-right: 1px solid rgba($white, 0.2);
@@ -772,13 +775,21 @@ section#get-in-touch{
 	}
 	.contact-details {
 		ul{
-			text-align: center;
+			text-align: left;
 
 			@include breakpoint (medium) {
 				padding-left: 26px;
+				text-align: center;
 			}
 			@include breakpoint (large) {
 				padding-right: 56px;
+			}
+
+			a:link, a:visited, a:active{
+				color: $white;
+				text-decoration: none;
+
+				&:hover{text-decoration: underline;}
 			}
 		}
 	}
@@ -836,13 +847,9 @@ footer.footer{
 				text-transform: uppercase;
 				color: $white;
 
-				&:hover{
-					color: rgba($white, 0.7);
-				}
+				&:hover{color: rgba($white, 0.7)}
 
-				@include breakpoint (medium) {
-					padding: 0 20px;
-				}
+				@include breakpoint (medium) {padding: 0 20px}
 
 				@include breakpoint (large) {
 					font-size: 16px;
